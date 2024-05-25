@@ -23,6 +23,9 @@
   ;; The minimal test is a noop.
   )
 
+(defun test-tree-sitter ()
+  (require 'tree-sitter-langs))
+
 (defun test-doom ()
   (let* ((out (getenv "out"))
          (test (intern-soft (format "test-%s" (getenv "testName"))))

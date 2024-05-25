@@ -74,4 +74,8 @@ in {
   };
   interactive = doomTest "minimal" { config = [ "default" ]; } { };
   interactive-without-loader = doomTest "minimal" { config = [ "default" ]; } { profileName = ""; };
+  tree-sitter = doomTest "tree-sitter" {
+    tools = [ "tree-sitter" ];
+    lang = [ [ "go" "+tree-sitter" ] ];
+  } { };
 }
